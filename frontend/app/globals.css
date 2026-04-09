@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-white antialiased;
+}
+
+a {
+  @apply transition-colors;
+}
+
+@layer components {
+  .ghost-border {
+    border: 1px solid rgba(140, 144, 159, 0.16);
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .technical-grid {
+    background-image: radial-gradient(circle, rgba(140, 144, 159, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply font-label text-xs font-semibold uppercase tracking-[0.28em] text-primary;
+  }
+}

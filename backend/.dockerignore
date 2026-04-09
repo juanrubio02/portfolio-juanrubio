@@ -1,0 +1,6 @@
+__pycache__
+.pytest_cache
+.ruff_cache
+*.pyc
+.venv
+alembic/versions/__pycache__
