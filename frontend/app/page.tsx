@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import { EngineeringPrinciples } from "@/components/sections/EngineeringPrinciples";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { StackContact } from "@/components/sections/StackContact";
+import { StackSection } from "@/components/sections/StackSection";
 import { getExperience, getProjects, getStack } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
@@ -44,9 +45,10 @@ export default async function HomePage() {
   return (
     <main>
       <HeroSection featuredProject={featuredProject} />
-      <EngineeringPrinciples />
       <ProjectsSection projects={projects} />
-      <StackContact technologies={technologies} experiences={experience} />
+      <ExperienceSection experiences={experience} />
+      <StackSection technologies={technologies} />
+      <ContactSection />
     </main>
   );
 }

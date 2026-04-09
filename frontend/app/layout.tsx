@@ -49,8 +49,8 @@ export default function RootLayout({
     >
       <body>
         <header className="sticky top-0 z-50 border-b border-white/10 bg-surface/80 backdrop-blur-xl">
-          <div className="section-shell flex items-center justify-between py-4">
-            <Link href="/" className="font-mono text-lg font-bold uppercase tracking-tight text-white">
+          <div className="section-shell flex items-center justify-between py-3 sm:py-4">
+            <Link href="/" className="font-mono text-base font-bold uppercase tracking-tight text-white sm:text-lg">
               Juan Rubio
             </Link>
             <nav className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wide text-slate-400 md:flex">
@@ -60,15 +60,18 @@ export default function RootLayout({
               <Link href="/projects" className="hover:text-white">
                 Proyectos
               </Link>
-              <a href="/#principles" className="hover:text-white">
-                Enfoque
+              <a href="/#experience" className="hover:text-white">
+                Experiencia
               </a>
               <a href="/#stack" className="hover:text-white">
-                Stack
+                Tecnologias
+              </a>
+              <a href="/#contact" className="hover:text-white">
+                Contacto
               </a>
             </nav>
-            <div className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1 font-label text-[10px] font-bold uppercase tracking-[0.24em] text-secondary">
-              Backend Developer (Python)
+            <div className="hidden rounded-full border border-secondary/20 bg-secondary/10 px-2.5 py-1 font-label text-[9px] font-bold uppercase tracking-[0.18em] text-secondary sm:inline-flex sm:px-3 sm:text-xs sm:tracking-[0.24em]">
+              Desarrollador backend (Python)
             </div>
           </div>
         </header>
