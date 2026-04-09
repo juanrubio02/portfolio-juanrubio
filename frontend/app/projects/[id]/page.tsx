@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 
 import { getProject } from "@/lib/api";
 
@@ -34,7 +33,30 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   const project = await getProject(Number(id));
 
   if (!project) {
-    notFound();
+    return (
+      <main className="bg-surface py-20">
+        <section className="section-shell space-y-8">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 font-label text-sm font-semibold uppercase tracking-[0.24em] text-slate-400 hover:text-white"
+          >
+            <span aria-hidden="true">&lt;-</span>
+            Volver a proyectos
+          </Link>
+
+          <div className="max-w-3xl">
+            <p className="eyebrow mb-4">Proyecto</p>
+            <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
+              Data unavailable.
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-slate-400">
+              No se ha podido cargar este proyecto desde el backend. Puede tratarse de un fallo de
+              red o de un servicio temporalmente no disponible.
+            </p>
+          </div>
+        </section>
+      </main>
+    );
   }
 
   return (

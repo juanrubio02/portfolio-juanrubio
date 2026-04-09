@@ -3,42 +3,46 @@ import type { Experience, ProjectDetail, ProjectSummary, Technology } from "@/ty
 const apiBaseUrl =
   process.env.BACKEND_INTERNAL_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://backend:8000";
 
-async function apiFetch<T>(path: string): Promise<T> {
-  const response = await fetch(`${apiBaseUrl}${path}`, {
-    cache: "no-store"
-  });
+export async function safeFetch<T>(path: string): Promise<T | null> {
+  const url = path.startsWith("http") ? path : `${apiBaseUrl}${path}`;
 
-  if (!response.ok) {
-    throw new Error(`API request failed for ${path} (${response.status})`);
+  try {
+    const response = await fetch(url, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      console.error(`[safeFetch] Request failed`, {
+        path,
+        url,
+        status: response.status
+      });
+      return null;
+    }
+
+    return (await response.json()) as T;
+  } catch (error) {
+    console.error(`[safeFetch] Network error`, {
+      path,
+      url,
+      error
+    });
+    return null;
   }
-
-  return (await response.json()) as T;
 }
 
-export async function getProjects(): Promise<ProjectSummary[]> {
-  return apiFetch<ProjectSummary[]>("/projects");
+export async function getProjects(): Promise<ProjectSummary[] | null> {
+  return safeFetch<ProjectSummary[]>("/projects");
 }
 
 export async function getProject(id: number): Promise<ProjectDetail | null> {
-  const response = await fetch(`${apiBaseUrl}/projects/${id}`, {
-    cache: "no-store"
-  });
-
-  if (response.status === 404) {
-    return null;
-  }
-
-  if (!response.ok) {
-    throw new Error(`Project request failed for ${id}`);
-  }
-
-  return (await response.json()) as ProjectDetail;
+  return safeFetch<ProjectDetail>(`/projects/${id}`);
 }
 
-export async function getStack(): Promise<Technology[]> {
-  return apiFetch<Technology[]>("/stack");
+export async function getStack(): Promise<Technology[] | null> {
+  return safeFetch<Technology[]>("/stack");
 }
 
-export async function getExperience(): Promise<Experience[]> {
-  return apiFetch<Experience[]>("/experience");
+export async function getExperience(): Promise<Experience[] | null> {
+  return safeFetch<Experience[]>("/experience");
 }
