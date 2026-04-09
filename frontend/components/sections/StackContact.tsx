@@ -1,4 +1,3 @@
-import { ContactForm } from "@/components/ui/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { Experience, Technology } from "@/types/api";
 
@@ -96,34 +95,38 @@ export function StackContact({ technologies, experiences }: StackContactProps) {
 
         <aside className="ghost-border h-fit rounded-[32px] bg-surface-low p-8 xl:sticky xl:top-28">
           <p className="eyebrow mb-4">Contacto</p>
-          <h3 className="font-display text-4xl font-bold text-white">Contacto backend.</h3>
-          <p className="mt-4 text-base leading-7 text-slate-400">
-            El formulario envía el mensaje al backend en FastAPI y guarda el contacto en la base de
-            datos del portfolio. También puedes escribirme por email o revisar mis repositorios.
+          <h3 className="font-display text-4xl font-bold text-white">Contacto directo.</h3>
+          <p className="mt-4 rounded-2xl border border-white/10 bg-surface-high px-5 py-4 text-lg font-semibold leading-8 text-white">
+            Backend Developer (Python) abierto a nuevas oportunidades. Puedes contactarme
+            directamente por email o LinkedIn.
           </p>
-          <div className="mt-8 grid gap-3 text-sm text-slate-300">
-            <a href="mailto:juanrrmuel@gmail.com" className="hover:text-white">
+          <p className="mt-4 text-base leading-7 text-slate-400">
+            Si quieres contactarme, aquí tienes mis enlaces principales. Prefiero mantener esta
+            parte simple: email, LinkedIn y GitHub.
+          </p>
+          <div className="mt-8 grid gap-4 text-sm text-slate-300">
+            <a
+              href="mailto:juanrrmuel@gmail.com"
+              className="rounded-xl px-1 py-1 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
               juanrrmuel@gmail.com
             </a>
             <a
               href="https://github.com/juanrubio02"
               target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
+              rel="noopener noreferrer"
+              className="rounded-xl px-1 py-1 underline-offset-4 transition-colors hover:text-white hover:underline"
             >
               github.com/juanrubio02
             </a>
             <a
               href="https://www.linkedin.com/in/juan-rubio-499a2b293/"
               target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
+              rel="noopener noreferrer"
+              className="rounded-xl px-1 py-1 underline-offset-4 transition-colors hover:text-white hover:underline"
             >
               linkedin.com/in/juan-rubio-499a2b293
             </a>
-          </div>
-          <div className="mt-8">
-            <ContactForm />
           </div>
         </aside>
       </div>
