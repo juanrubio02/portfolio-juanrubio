@@ -1,7 +1,10 @@
 import type { Experience, ProjectDetail, ProjectSummary, Technology } from "@/types/api";
 
-const apiBaseUrl =
-  process.env.BACKEND_INTERNAL_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://backend:8000";
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+if (!apiBaseUrl) {
+  throw new Error("NEXT_PUBLIC_API_BASE_URL is not defined");
+}
 
 export async function safeFetch<T>(path: string): Promise<T | null> {
   const url = path.startsWith("http") ? path : `${apiBaseUrl}${path}`;

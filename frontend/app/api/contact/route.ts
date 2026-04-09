@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 
-const apiBaseUrl =
-  process.env.BACKEND_INTERNAL_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://backend:8000";
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+if (!apiBaseUrl) {
+  throw new Error("NEXT_PUBLIC_API_BASE_URL is not defined");
+}
 
 export async function POST(request: Request) {
   const body = await request.json();

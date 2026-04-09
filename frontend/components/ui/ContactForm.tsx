@@ -12,6 +12,12 @@ const initialState: ContactState = {
   message: ""
 };
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+if (!apiBaseUrl) {
+  throw new Error("NEXT_PUBLIC_API_BASE_URL is not defined");
+}
+
 export function ContactForm() {
   const [state, setState] = useState<ContactState>(initialState);
 
@@ -29,7 +35,7 @@ export function ContactForm() {
     setState({ status: "submitting", message: "Enviando mensaje..." });
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`${apiBaseUrl}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
