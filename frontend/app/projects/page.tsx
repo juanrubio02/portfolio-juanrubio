@@ -21,7 +21,7 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl">
             <p className="eyebrow mb-4">Proyectos</p>
             <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
-              Portfolio loading...
+              Data unavailable.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
               Los datos del backend no están disponibles ahora mismo. La página de proyectos sigue

@@ -10,8 +10,7 @@ export function ContactSection() {
             contactarme directamente por email o LinkedIn.
           </p>
           <p className="mt-4 text-base leading-7 text-slate-400">
-            Si quieres contactarme, aquí tienes mis enlaces principales. Prefiero mantener esta
-            parte simple: email, LinkedIn y GitHub.
+            Si quieres contactarme, aquí tienes mis enlaces principales: email, LinkedIn y GitHub.
           </p>
           <div className="mt-8 grid gap-4 text-sm text-slate-300">
             <a
