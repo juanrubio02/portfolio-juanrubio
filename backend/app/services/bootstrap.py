@@ -56,6 +56,20 @@ async def seed_portfolio_data(session: AsyncSession) -> None:
             highlight=False,
             sort_order=5,
         ),
+        "n8n": Technology(
+            name="n8n",
+            category="Automatizacion",
+            description="Orquestacion de flujos para disparar acciones, alertas e integraciones sin trabajo manual.",
+            highlight=False,
+            sort_order=6,
+        ),
+        "Google Sheets": Technology(
+            name="Google Sheets",
+            category="Integracion",
+            description="Destino ligero para registrar leads y compartir seguimiento comercial con el equipo.",
+            highlight=False,
+            sort_order=7,
+        ),
     }
 
     projects = [
@@ -84,6 +98,29 @@ async def seed_portfolio_data(session: AsyncSession) -> None:
             ],
         ),
         Project(
+            slug="revpilot",
+            title="RevPilot",
+            summary="Sistema de lead intelligence que extrae datos con IA, puntua oportunidades y activa automatizaciones en tiempo real.",
+            challenge="Clasificar leads entrantes de forma manual ralentiza al equipo comercial y hace que oportunidades de alto valor se atiendan tarde.",
+            solution="El backend combina extraccion estructurada, reglas de scoring explicables y automatizaciones con n8n para decidir la prioridad y enviar cada lead al siguiente paso operativo.",
+            outcome="Aporta un caso claro de backend orientado a revenue operations con automatizacion, razonamiento explicable e integraciones listas para uso real.",
+            metrics=[
+                {"label": "Scoring", "value": "Reglas + IA"},
+                {"label": "Automatizacion", "value": "n8n en tiempo real"},
+                {"label": "Destino", "value": "Google Sheets"},
+            ],
+            featured=False,
+            display_order=2,
+            cover_image=None,
+            repository_url="https://github.com/juanrubio02/RevPilot",
+            technologies=[
+                technologies["Python"],
+                technologies["FastAPI"],
+                technologies["n8n"],
+                technologies["Google Sheets"],
+            ],
+        ),
+        Project(
             slug="ai-document-pipeline",
             title="AI Document Pipeline",
             summary="API y worker para subir documentos, evitar duplicados y procesarlos en segundo plano para su consulta posterior.",
@@ -96,7 +133,7 @@ async def seed_portfolio_data(session: AsyncSession) -> None:
                 {"label": "Busqueda", "value": "Documental"},
             ],
             featured=False,
-            display_order=2,
+            display_order=3,
             cover_image=None,
             repository_url="https://github.com/juanrubio02/ai-document-pipeline",
             technologies=[
@@ -120,7 +157,7 @@ async def seed_portfolio_data(session: AsyncSession) -> None:
                 {"label": "Alcance", "value": "Integracion acotada"},
             ],
             featured=False,
-            display_order=3,
+            display_order=4,
             cover_image=None,
             repository_url="https://github.com/juanrubio02/holded-billing-automation",
             technologies=[
@@ -141,7 +178,7 @@ async def seed_portfolio_data(session: AsyncSession) -> None:
                 {"label": "Datos", "value": "PostgreSQL"},
             ],
             featured=False,
-            display_order=4,
+            display_order=5,
             cover_image=None,
             repository_url="https://github.com/juanrubio02/ticket-triage-system",
             technologies=[
