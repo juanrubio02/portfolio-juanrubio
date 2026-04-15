@@ -47,11 +47,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           <div className="max-w-3xl">
             <p className="eyebrow mb-4">Proyecto</p>
             <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
-              Data unavailable.
+              Información no disponible.
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-400">
               No se ha podido cargar este proyecto desde el backend. Puede tratarse de un fallo de
-              red o de un servicio temporalmente no disponible.
+              red o de que el servicio no esté disponible temporalmente.
             </p>
           </div>
         </section>

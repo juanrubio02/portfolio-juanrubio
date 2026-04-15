@@ -9,9 +9,9 @@ import { getExperience, getProjects, getStack } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "Juan Rubio | Backend Developer (Python, FastAPI, PostgreSQL)",
+  title: "Juan Rubio | Desarrollador backend (Python, FastAPI, PostgreSQL)",
   description:
-    "Portfolio de backend con proyectos en Python, FastAPI, PostgreSQL, Docker y SQLAlchemy."
+    "Portfolio backend con proyectos de Python, FastAPI, PostgreSQL, Docker y SQLAlchemy."
 };
 
 export default async function HomePage() {
@@ -28,11 +28,11 @@ export default async function HomePage() {
           <div className="max-w-2xl space-y-6">
             <p className="eyebrow">Portfolio</p>
             <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
-              Data unavailable.
+              Información no disponible.
             </h1>
             <p className="text-lg leading-8 text-slate-400">
-              El portfolio no puede cargar datos del backend ahora mismo. La interfaz sigue
-              disponible y puedes volver a intentarlo en unos minutos.
+              El portfolio no puede cargar los datos del backend en este momento. La interfaz
+              sigue disponible y puedes volver a intentarlo dentro de unos minutos.
             </p>
           </div>
         </section>

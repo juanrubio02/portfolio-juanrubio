@@ -3,17 +3,17 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const principles = [
   {
     title: "Contratos claros en la API",
-    body: "Prefiero rutas simples, validación explícita y respuestas consistentes. Si una API se entiende rápido, también es más fácil mantenerla.",
+    body: "Prefiero rutas sencillas, validación explícita y respuestas consistentes. Si una API se entiende rápido, también resulta más fácil mantenerla.",
     tags: ["FastAPI", "Pydantic"]
   },
   {
-    title: "Código que se deja tocar",
-    body: "Suelo separar rutas, servicios y acceso a datos para no mezclar responsabilidades. Esto ayuda a cambiar una parte sin romper el resto.",
-    tags: ["Services", "SQLAlchemy"]
+    title: "Código fácil de evolucionar",
+    body: "Suelo separar rutas, servicios y acceso a datos para no mezclar responsabilidades. Así es más sencillo cambiar una parte sin afectar al resto.",
+    tags: ["Servicios", "SQLAlchemy"]
   },
   {
     title: "Complejidad solo cuando aporta",
-    body: "No intento meter colas, workers o integraciones por apariencia. Prefiero empezar por una solución clara y añadir complejidad solo cuando el problema la necesita.",
+    body: "No introduzco colas, workers o integraciones por pura apariencia. Prefiero empezar con una solución clara y añadir complejidad solo cuando el problema lo exige.",
     tags: ["APIs", "Backend"]
   }
 ];
@@ -25,7 +25,7 @@ export function EngineeringPrinciples() {
         <SectionHeading
           eyebrow="Enfoque"
           title="Forma de trabajar en backend."
-          description="El portfolio está centrado en APIs, persistencia, procesamiento de datos e integraciones explicadas de forma directa."
+          description="El portfolio se centra en APIs, persistencia, procesamiento de datos e integraciones, explicados de forma directa."
         />
 
         <div className="grid gap-4 md:grid-cols-3">

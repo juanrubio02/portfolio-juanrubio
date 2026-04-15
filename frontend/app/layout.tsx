@@ -24,13 +24,13 @@ const siteUrl = "https://juanrubio.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Juan Rubio | Backend Developer (Python, FastAPI, PostgreSQL)",
+  title: "Juan Rubio | Desarrollador backend (Python, FastAPI, PostgreSQL)",
   description:
-    "Portfolio de backend con proyectos en Python, FastAPI, PostgreSQL, Docker y SQLAlchemy.",
+    "Portfolio backend con proyectos de Python, FastAPI, PostgreSQL, Docker y SQLAlchemy.",
   openGraph: {
-    title: "Juan Rubio | Backend Developer (Python, FastAPI, PostgreSQL)",
+    title: "Juan Rubio | Desarrollador backend (Python, FastAPI, PostgreSQL)",
     description:
-      "Portfolio de backend con proyectos en Python, FastAPI, PostgreSQL, Docker y SQLAlchemy.",
+      "Portfolio backend con proyectos de Python, FastAPI, PostgreSQL, Docker y SQLAlchemy.",
     url: siteUrl,
     siteName: "Juan Rubio",
     locale: "es_ES",

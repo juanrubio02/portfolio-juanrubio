@@ -86,8 +86,8 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Proyectos"
-            title="Proyectos backend construidos alrededor de problemas concretos."
-            description="El foco está en APIs, integraciones, procesamiento documental y modelado de datos. El proyecto principal es el que mejor representa mi perfil backend."
+            title="Proyectos backend diseñados para resolver problemas concretos."
+            description="El foco está puesto en APIs, integraciones, procesamiento documental y modelado de datos. El proyecto principal es el que mejor representa mi perfil como desarrollador backend."
           />
           <Link
             href="/projects"

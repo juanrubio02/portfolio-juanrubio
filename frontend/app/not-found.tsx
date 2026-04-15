@@ -9,7 +9,7 @@ export default function NotFound() {
           Proyecto no encontrado.
         </h1>
         <p className="mt-4 text-lg text-slate-400">
-          El identificador solicitado no corresponde a ningún proyecto publicado en el portfolio.
+          El identificador solicitado no corresponde a ningún proyecto incluido en el portfolio.
         </p>
         <Link
           href="/projects"

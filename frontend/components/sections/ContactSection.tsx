@@ -6,11 +6,12 @@ export function ContactSection() {
           <p className="eyebrow mb-4">Contacto</p>
           <h3 className="font-display text-4xl font-bold text-white">Contacto directo.</h3>
           <p className="mt-4 rounded-2xl border border-white/10 bg-surface-high px-5 py-4 text-lg font-semibold leading-8 text-white">
-            Desarrollador backend en Python abierto a nuevas oportunidades. Puedes
-            contactarme directamente por email o LinkedIn.
+            Desarrollador backend en Python abierto a nuevas oportunidades. Puedes contactarme
+            directamente por correo electrónico o LinkedIn.
           </p>
           <p className="mt-4 text-base leading-7 text-slate-400">
-            Si quieres contactarme, aquí tienes mis enlaces principales: email, LinkedIn y GitHub.
+            Si quieres escribirme, aquí tienes mis enlaces principales: correo electrónico,
+            LinkedIn y GitHub.
           </p>
           <div className="mt-8 grid gap-4 text-sm text-slate-300">
             <a

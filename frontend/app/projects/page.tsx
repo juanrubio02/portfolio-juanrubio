@@ -6,7 +6,7 @@ import { getProjects } from "@/lib/api";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Juan Rubio | Proyectos Backend",
+  title: "Juan Rubio | Proyectos backend",
   description:
     "Proyectos backend de Juan Rubio centrados en APIs, integraciones y procesamiento de datos con Python."
 };
@@ -21,11 +21,11 @@ export default async function ProjectsPage() {
           <div className="max-w-3xl">
             <p className="eyebrow mb-4">Proyectos</p>
             <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
-              Data unavailable.
+              Información no disponible.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-              Los datos del backend no están disponibles ahora mismo. La página de proyectos sigue
-              activa y se mostrará cuando el servicio vuelva a responder.
+              Los datos del backend no están disponibles en este momento. La página de proyectos
+              sigue activa y volverá a mostrarse cuando el servicio responda de nuevo.
             </p>
           </div>
         </section>
@@ -42,8 +42,8 @@ export default async function ProjectsPage() {
             Backend aplicado a problemas concretos.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-            APIs, procesamiento documental, integraciones con terceros y modelado de datos en
-            proyectos orientados a backend.
+            APIs, procesamiento documental, integraciones con terceros y modelado de datos
+            aplicados a proyectos backend.
           </p>
         </div>
 

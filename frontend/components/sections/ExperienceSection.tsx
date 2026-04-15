@@ -5,7 +5,7 @@ type ExperienceSectionProps = {
   experiences: Experience[];
 };
 
-const formatter = new Intl.DateTimeFormat("en", {
+const formatter = new Intl.DateTimeFormat("es-ES", {
   month: "short",
   year: "numeric"
 });
@@ -25,7 +25,7 @@ function formatPeriod(startDate: string | null, endDate: string | null) {
   }
 
   return `${formatter.format(new Date(safeStartDate))} - ${
-    endDate ? formatter.format(new Date(endDate)) : "Present"
+    endDate ? formatter.format(new Date(endDate)) : "Actualidad"
   }`;
 }
 
@@ -44,7 +44,7 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
         <SectionHeading
           eyebrow="Experiencia"
           title="Experiencia en desarrollo backend."
-          description="Experiencia en Python, APIs, bases de datos SQL e integraciones sobre aplicaciones internas y flujos de datos."
+          description="Trayectoria trabajando con Python, APIs, bases de datos SQL e integraciones para aplicaciones internas y flujos de datos."
         />
 
         <div className="space-y-6">

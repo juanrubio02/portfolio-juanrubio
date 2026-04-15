@@ -10,9 +10,9 @@ export function StackSection({ technologies }: StackSectionProps) {
     <section id="stack" className="bg-surface py-24">
       <div className="section-shell space-y-14">
         <SectionHeading
-          eyebrow="Stack"
+          eyebrow="Tecnologías"
           title="Tecnologías con las que trabajo en backend."
-          description="Aquí muestro solo herramientas que aparecen de verdad en este portfolio y que puedo explicar con detalle en entrevista."
+          description="Aquí muestro solo herramientas presentes de verdad en este portfolio y que puedo explicar con detalle en una entrevista."
         />
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -27,7 +27,7 @@ export function StackSection({ technologies }: StackSectionProps) {
                 </h3>
                 {technology.highlight ? (
                   <span className="rounded-full bg-secondary/10 px-3 py-1 text-[10px] font-label font-bold uppercase tracking-[0.22em] text-secondary">
-                    Core
+                    Clave
                   </span>
                 ) : null}
               </div>
