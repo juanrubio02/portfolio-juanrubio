@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 
-import { ContactSection } from "@/components/sections/ContactSection";
-import { ExperienceSection } from "@/components/sections/ExperienceSection";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { StackSection } from "@/components/sections/StackSection";
-import { getExperience, getProjects, getStack } from "@/lib/api";
+import { HomePageClient } from "@/components/pages/HomePageClient";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -14,41 +9,6 @@ export const metadata: Metadata = {
     "Portfolio backend con proyectos de Python, FastAPI, PostgreSQL, Docker y SQLAlchemy."
 };
 
-export default async function HomePage() {
-  const [projects, technologies, experience] = await Promise.all([
-    getProjects(),
-    getStack(),
-    getExperience()
-  ]);
-
-  if (!projects || !technologies || !experience) {
-    return (
-      <main className="bg-surface">
-        <section className="section-shell flex min-h-[70vh] items-center py-20">
-          <div className="max-w-2xl space-y-6">
-            <p className="eyebrow">Portfolio</p>
-            <h1 className="font-display text-5xl font-black tracking-tight text-white md:text-7xl">
-              Información no disponible.
-            </h1>
-            <p className="text-lg leading-8 text-slate-400">
-              El portfolio no puede cargar los datos del backend en este momento. La interfaz
-              sigue disponible y puedes volver a intentarlo dentro de unos minutos.
-            </p>
-          </div>
-        </section>
-      </main>
-    );
-  }
-
-  const featuredProject = projects.find((project) => project.featured) ?? projects[0];
-
-  return (
-    <main>
-      <HeroSection featuredProject={featuredProject} />
-      <ProjectsSection projects={projects} />
-      <ExperienceSection experiences={experience} />
-      <StackSection technologies={technologies} />
-      <ContactSection />
-    </main>
-  );
+export default function HomePage() {
+  return <HomePageClient />;
 }

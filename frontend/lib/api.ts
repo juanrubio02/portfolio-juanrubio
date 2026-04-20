@@ -2,11 +2,12 @@ import type { Experience, ProjectDetail, ProjectSummary, Technology } from "@/ty
 
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-if (!apiBaseUrl) {
-  throw new Error("NEXT_PUBLIC_API_BASE_URL is not defined");
-}
-
 export async function safeFetch<T>(path: string): Promise<T | null> {
+  if (!path.startsWith("http") && !apiBaseUrl) {
+    console.error(`[safeFetch] Missing NEXT_PUBLIC_API_BASE_URL`, { path });
+    return null;
+  }
+
   const url = path.startsWith("http") ? path : `${apiBaseUrl}${path}`;
 
   try {
